@@ -1,0 +1,23 @@
+/* Header */
+.fist-title {
+  color: #ffa500;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.seccond-title {
+  color: #2a3042;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.btn-search {
+  background-color: #ffa500;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-search:hover {
+  background-color: #ffb74d;
+}
