@@ -3,15 +3,17 @@ export interface IProduct {
   descricao: string;
   preco: number;
   descricaoPreco: string;
+  quantidadeEstoque: number;
   imagem: string;
 }
 
-export const products = [
+export const products: IProduct[] = [
   {
     id: 1,
     descricao: 'Mouse gamer',
     preco: 439.0,
     descricaoPreco: 'À vista no PIX',
+    quantidadeEstoque: 10,
     imagem: '/assets/mouse-3.jpg',
   },
   {
@@ -19,7 +21,7 @@ export const products = [
     descricao: 'Monitor muito bom',
     preco: 1200.5,
     descricaoPreco: 'À vista no PIX',
-    desconto: 2000.0,
+    quantidadeEstoque: 10,
     imagem: '/assets/monitor-1.jpg',
   },
   {
@@ -27,6 +29,7 @@ export const products = [
     descricao: 'Teclado excelente',
     preco: 749.99,
     descricaoPreco: 'À vista no PIX',
+    quantidadeEstoque: 10,
     imagem: '/assets/teclado-1.jpg',
   },
   {
@@ -34,6 +37,7 @@ export const products = [
     descricao: 'Fone para quem joga FPS',
     preco: 599.99,
     descricaoPreco: 'À vista no PIX',
+    quantidadeEstoque: 10,
     imagem: '/assets/fone-de-ouvido-2.jpg',
   },
   {
@@ -41,6 +45,7 @@ export const products = [
     descricao: 'Fone de ouvido',
     preco: 299.99,
     descricaoPreco: 'À vista no PIX',
+    quantidadeEstoque: 10,
     imagem: '/assets/fone-de-ouvido-1.jpg',
   },
   {
@@ -48,6 +53,7 @@ export const products = [
     descricao: 'Fone de ouvido bom',
     preco: 399.99,
     descricaoPreco: 'À vista no PIX',
+    quantidadeEstoque: 10,
     imagem: '/assets/fone-de-ouvido-3.jpg',
   },
   {
@@ -55,6 +61,7 @@ export const products = [
     descricao: 'HD 1TB',
     preco: 499.99,
     descricaoPreco: 'À vista no PIX',
+    quantidadeEstoque: 10,
     imagem: '/assets/hd.jpg',
   },
   {
@@ -62,6 +69,7 @@ export const products = [
     descricao: 'Combo de placa de vídeos',
     preco: 18449.99,
     descricaoPreco: 'À vista no PIX',
+    quantidadeEstoque: 10,
     imagem: '/assets/placa-video.jpg',
   },
   {
@@ -69,6 +77,7 @@ export const products = [
     descricao: 'Processador Ryzen',
     preco: 1000,
     descricaoPreco: 'À vista no PIX',
+    quantidadeEstoque: 10,
     imagem: '/assets/processador.jpg',
   },
   {
@@ -76,6 +85,7 @@ export const products = [
     descricao: 'Notebook bom',
     preco: 2500,
     descricaoPreco: 'À vista no PIX',
+    quantidadeEstoque: 10,
     imagem: '/assets/laptop-1.jpg',
   },
   {
@@ -83,6 +93,7 @@ export const products = [
     descricao: 'Notebook excelente',
     preco: 4500,
     descricaoPreco: 'À vista no PIX',
+    quantidadeEstoque: 10,
     imagem: '/assets/laptop-2.jpg',
   },
   {
@@ -90,6 +101,7 @@ export const products = [
     descricao: 'Mouse barato',
     preco: 20,
     descricaoPreco: 'À vista no PIX',
+    quantidadeEstoque: 10,
     imagem: '/assets/mouse-1.png',
   },
   {
@@ -97,6 +109,7 @@ export const products = [
     descricao: 'Mouse ótimo',
     preco: 200,
     descricaoPreco: 'À vista no PIX',
+    quantidadeEstoque: 10,
     imagem: '/assets/mouse-2.jpg',
   },
   {
@@ -104,6 +117,7 @@ export const products = [
     descricao: 'Mouse pequeno',
     preco: 50,
     descricaoPreco: 'À vista no PIX',
+    quantidadeEstoque: 10,
     imagem: '/assets/mouse-4.jpg',
   },
   {
@@ -111,6 +125,7 @@ export const products = [
     descricao: 'Teclado bom',
     preco: 159.99,
     descricaoPreco: 'À vista no PIX',
+    quantidadeEstoque: 10,
     imagem: '/assets/teclado-2.jpg',
   },
 ];
