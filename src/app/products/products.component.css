@@ -1,0 +1,15 @@
+section .container {
+  /* border: 1px solid black; */
+  margin-top: 50px;
+  /* padding: 20px; */
+}
+
+section .container .card {
+  margin: 20px;
+}
+
+.custom-center-btn {
+  display: block; /* Ou inline-block */
+  width: fit-content; /* Ou uma largura fixa, ex: 100px */
+  margin: 0 auto;
+}
