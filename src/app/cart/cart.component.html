@@ -1,0 +1,38 @@
+<section class="cart" *ngIf="cartItens.length > 0; else notProduct">
+  <div
+    class="card w-90"
+    style="margin: 20px"
+    *ngFor="let cartItem of cartItens"
+  >
+    <h2 class="card-header">Cart</h2>
+    <img
+      [src]="cartItem.imagem"
+      style="width: 7rem"
+      class="align-self-left mr-3"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ cartItem.descricao }}</h5>
+      <p class="card-text">Preço: {{ cartItem.preco | currency : "BRL" }}</p>
+      <!-- <p class="card-text" [(ngModel)]="cartItem.quantidade">Quantidade</p> -->
+      <label>
+        Quantidade:
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="cartItem.quantidade"
+          [min]="1"
+          (change)="calculateAmount()"
+        />unidades
+      </label>
+
+      <button href="#" class="btn btn-primary mr-3" (click)="buy()">Buy</button>
+      <button class="btn btn-danger" (click)="removeCartProduct(cartItem.id)">
+        X
+      </button>
+    </div>
+  </div>
+  <h3 class="card-text">Total: {{ amount | currency : "BRL" }}</h3>
+</section>
+
+<ng-template #notProduct>Not product in cart.</ng-template>

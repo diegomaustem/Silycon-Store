@@ -12,7 +12,7 @@ import { ProductsService } from 'src/app/products.service';
 })
 export class ProductDetailsComponent implements OnInit {
   product: IProduct | undefined;
-  quanityProduct: number = 1;
+  quantityProduct: number = 1;
 
   constructor(
     private productsService: ProductsService,
@@ -33,7 +33,7 @@ export class ProductDetailsComponent implements OnInit {
 
     const product: ICartProduct = {
       ...this.product!,
-      quantidade: this.quanityProduct,
+      quantidade: this.quantityProduct,
     };
     this.cartService.addingToCart(product);
   }
