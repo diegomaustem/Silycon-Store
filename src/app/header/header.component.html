@@ -22,32 +22,21 @@
           <a class="nav-link" href="#">Home </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Products</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Dropdown
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#" routerLink="/cart">{{
-              cartService.getCart().length
-            }}</a>
-          </div>
+          <a class="nav-link" routerLink="/products">Products</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact">Contact</a>
         </li>
-        <li></li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cart"
+            ><i class="fa-solid fa-cart-shopping"> </i>
+            <span class="numbers-of-products">{{
+              cartService.getCart().length
+            }}</span></a
+          >
+        </li>
       </ul>
+
       <app-search-product></app-search-product>
     </div>
   </nav>
