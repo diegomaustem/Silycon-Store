@@ -1,0 +1,193 @@
+<p>Contact</p>
+<section>
+  <div class="container">
+    <form [formGroup]="formContact" (ngSubmit)="sendForm()">
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control mb-4"
+            placeholder="You name"
+            formControlName="name"
+            [class.valid]="formContact.controls['name'].valid"
+            [class.invalid]="
+              formContact.controls['name'].invalid &&
+              (formContact.controls['name'].touched ||
+                formContact.controls['name'].dirty)
+            "
+          />
+          <div
+            *ngIf="
+              formContact.controls['name'].invalid &&
+              (formContact.controls['name'].touched ||
+                formContact.controls['name'].dirty)
+            "
+          >
+            <small
+              class="error-message"
+              *ngIf="formContact.controls['name'].hasError('minlength')"
+              >É necessário no mínimo 3 caracters!</small
+            >
+
+            <small
+              class="error-message"
+              *ngIf="formContact.controls['name'].hasError('required')"
+              >O campo é obrigatório!</small
+            >
+          </div>
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Subject"
+            formControlName="subject"
+            [class.valid]="formContact.controls['subject'].valid"
+            [class.invalid]="
+              formContact.controls['subject'].invalid &&
+              (formContact.controls['subject'].touched ||
+                formContact.controls['subject'].dirty)
+            "
+          />
+          <div
+            *ngIf="
+              formContact.controls['subject'].invalid &&
+              (formContact.controls['subject'].touched ||
+                formContact.controls['subject'].dirty)
+            "
+          >
+            <small
+              class="error-message"
+              *ngIf="formContact.controls['subject'].hasError('minlength')"
+              >É necessário no mínimo 10 caracters!</small
+            >
+
+            <small
+              class="error-message"
+              *ngIf="formContact.controls['subject'].hasError('required')"
+              >O campo é obrigatório!</small
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="(00) 0 0000-0000"
+            mask="(00) 0 0000-0000"
+            formControlName="phone"
+            [class.valid]="formContact.controls['phone'].valid"
+            [class.invalid]="
+              formContact.controls['phone'].invalid &&
+              (formContact.controls['phone'].touched ||
+                formContact.controls['phone'].dirty)
+            "
+          />
+          <div
+            *ngIf="
+              formContact.controls['phone'].invalid &&
+              (formContact.controls['phone'].touched ||
+                formContact.controls['phone'].dirty)
+            "
+          >
+            <small
+              class="error-message"
+              *ngIf="formContact.controls['phone'].hasError('minlength')"
+              >É necessário no mínimo 11 caracters!</small
+            >
+
+            <small
+              class="error-message"
+              *ngIf="formContact.controls['phone'].hasError('required')"
+              >O campo é obrigatório!</small
+            >
+          </div>
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Email"
+            formControlName="email"
+            [class.valid]="formContact.controls['email'].valid"
+            [class.invalid]="
+              formContact.controls['email'].invalid &&
+              (formContact.controls['email'].touched ||
+                formContact.controls['email'].dirty)
+            "
+          />
+
+          <div
+            *ngIf="
+              formContact.controls['email'].invalid &&
+              (formContact.controls['email'].touched ||
+                formContact.controls['email'].dirty)
+            "
+          >
+            <small
+              class="error-message"
+              *ngIf="formContact.controls['email'].hasError('email')"
+              >É preciso um e-mail válido!</small
+            >
+
+            <small
+              class="error-message"
+              *ngIf="formContact.controls['email'].hasError('required')"
+              >O campo é obrigatório!</small
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="mb-3 mt-3">
+            <textarea
+              class="form-control"
+              placeholder="Required example textarea"
+              formControlName="message"
+              [class.valid]="formContact.controls['message'].valid"
+              [class.invalid]="
+                formContact.controls['message'].invalid &&
+                (formContact.controls['message'].touched ||
+                  formContact.controls['message'].dirty)
+              "
+            ></textarea>
+            <div
+              *ngIf="
+                formContact.controls['message'].invalid &&
+                (formContact.controls['message'].touched ||
+                  formContact.controls['message'].dirty)
+              "
+            >
+              <small
+                class="error-message"
+                *ngIf="formContact.controls['message'].hasError('minlength')"
+                >É necessário 20 caracters!</small
+              >
+
+              <small
+                class="error-message"
+                *ngIf="formContact.controls['message'].hasError('required')"
+                >O campo é obrigatório!</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="formContact.invalid"
+          >
+            Send
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
