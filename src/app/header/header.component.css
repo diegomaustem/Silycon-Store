@@ -10,14 +10,3 @@
   font-size: 35px;
   font-weight: bold;
 }
-
-.btn-search {
-  background-color: #ffa500;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.btn-search:hover {
-  background-color: #ffb74d;
-}
