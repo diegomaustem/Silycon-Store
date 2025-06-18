@@ -1,0 +1,45 @@
+section .container {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+img {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: #2a3042;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.card-price {
+  color: #ffa500;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.card-stock-info i {
+  color: #2ca67a;
+  font-size: 18px;
+}
+
+.amount-label-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.amount-label-flex input {
+  margin-right: 8px;
+  width: 70px;
+}
+
+.btn-add-to-cart {
+  color: white;
+  background-color: #2a3042;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #1d222e;
+}

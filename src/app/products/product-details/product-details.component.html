@@ -1,29 +1,35 @@
-<section class="container">
-  <div class="media">
-    <img
-      [src]="product?.imagem"
-      style="width: 15rem"
-      class="align-self-center mr-3"
-      alt="..."
-    />
-    <div class="media-body">
-      <h5 class="mt-0">{{ product?.descricao }}</h5>
-      <p>{{ product?.preco | currency : "BRL" }}</p>
-      <p class="mb-0">Estoque disponível</p>
-      <label>
-        Quantidade:
-        <input
-          type="number"
-          class="form-control"
-          [(ngModel)]="quantityProduct"
-          [min]="1"
-        />unidades
-      </label>
-      <!-- <p class="mb-0">Quantidade unidades</p> -->
-      <p class="mb-0">{{ product?.quantidadeEstoque }} unidade(s) em estoque</p>
-      <button class="btn btn-primary" (click)="addToCart()">
-        Adicionar ao carrinho
-      </button>
+<section class="product-details">
+  <div class="container">
+    <div class="row">
+      <img
+        [src]="product?.imagem"
+        style="width: 15rem"
+        class="align-self-center mr-3"
+        alt="..."
+      />
+      <div class="media-body">
+        <h5 class="card-title">{{ product?.descricao }}</h5>
+        <p class="card-price">{{ product?.preco | currency : "BRL" }}</p>
+        <p class="card-stock-info">
+          Available stock
+          <i class="fa-solid fa-circle-check"></i>
+        </p>
+
+        <label class="amount-label-flex">
+          Amount:
+          <input
+            type="number"
+            class="form-control"
+            [(ngModel)]="quantityProduct"
+            [min]="1"
+          />
+          unit(s)
+        </label>
+        <p class="mb-3">{{ product?.quantidadeEstoque }} unit(s) in stock</p>
+        <button class="btn btn-add-to-cart" (click)="addToCart()">
+          Add to Cart
+        </button>
+      </div>
     </div>
   </div>
 </section>
