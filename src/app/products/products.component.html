@@ -1,22 +1,26 @@
 <section class="products">
   <div class="container">
     <div class="row">
-      <a
-        routerLink="/products/{{ product.id }}"
-        class="card"
-        style="width: 15rem"
+      <div
+        class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
         *ngFor="let product of products"
       >
-        <img [src]="product.imagem" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">{{ product.descricao }}</h5>
-          <p class="card-text">{{ product.preco | currency : "BRL" }}</p>
-          <p class="card-text">{{ product.descricaoPreco }}</p>
-          <div class="text-center">
-            <a href="#" class="btn btn-primary">Buy</a>
+        <a routerLink="/products/{{ product.id }}" class="card h-100">
+          <img [src]="product.imagem" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ product.descricao }}</h5>
+            <p class="card-text text-center">
+              {{ product.preco | currency : "BRL" }}
+            </p>
+            <p class="card-text text-center desc">
+              {{ product.descricaoPreco }}
+            </p>
+            <div class="text-center">
+              <a class="btn btn-buy">Buy now</a>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
   </div>
 </section>
