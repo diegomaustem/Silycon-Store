@@ -1,0 +1,41 @@
+.title-cart {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.title-product {
+  font-size: 18px;
+}
+
+.title-price {
+  text-align: left;
+  font-size: 18px;
+}
+
+.quantity {
+  text-align: left;
+  font-size: 18px;
+}
+
+.amount-label-flex input {
+  width: 70px;
+}
+
+.amount-price {
+  color: #2a3042;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.btn-make-payment {
+  color: white;
+  background-color: #2a3042;
+}
+
+.btn-make-payment:hover {
+  background-color: #1d222e;
+}
+
+.cart-products {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
